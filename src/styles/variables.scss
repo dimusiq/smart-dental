@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,100&family=Roboto:wght@400;700&display=swap');
+
+$montserrat-font: 'Montserrat', sans-serif;
+$roboto-font: 'Roboto', sans-serif;
+
+$bg: #ffffff;
+$text: #127bd7;
+$text2: #2d2d2d;
+$bg2: #dfeffc;
+$form: #bfdefa;
+
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+$sm: 37.5em;
+$md: 48em;
+$lg: 64em;
+$xl: 75em;
+
+$bxs: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+@mixin breakpoint($point) {
+	@if $point == md {
+		@media (min-width: $md) {
+			@content;
+		}
+	}
+}
+
+

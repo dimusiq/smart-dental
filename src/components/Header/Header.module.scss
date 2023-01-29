@@ -1,0 +1,83 @@
+@import './../../styles/variables.scss';
+
+.header {
+	height: 150px;
+	background-color: #f7ffff;
+	padding: 1.5rem;
+	position: fixed;
+	z-index: 100;
+	color: $text2;
+	width: 100%;
+	box-shadow: 0 1px 5px;
+
+	&__content {
+		max-width: 1800px;
+		margin: 0 auto;
+		padding: 0 $spacing-md;
+
+		@include breakpoint(md) {
+			padding: 0 $spacing-lg;
+		}
+		transition: 0.3s ease padding;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		& > div {
+			flex: 1;
+			white-space: nowrap;
+
+			&:nth-child(2) {
+				display: flex;
+				justify-content: center;
+				height: 100%;
+
+				&:last-of-type {
+					display: flex;
+					justify-content: flex-end;
+				}
+			}
+		}
+	}
+}
+
+.logo {
+	width: 40px;
+}
+
+.nav {
+	width: 100%;
+	position: fixed;
+	top: 150px;
+	//right: -100%;
+	background: $bxs;
+	text-align: center;
+
+	&__item,
+	ul,
+	li {
+		display: block;
+		padding: $spacing-md;
+		text-decoration: none;
+		color: inherit;
+		height: 100%;
+		transition: 0.3s ease color;
+		&:hover {
+			color: $text;
+		}
+	}
+
+	@include breakpoint(md) {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		background: initial;
+		width: auto;
+		padding: 0;
+
+		&__item {
+			padding: 0 $spacing-lg;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
