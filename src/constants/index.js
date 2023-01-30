@@ -1,5 +1,9 @@
 export const navLinks = [
 	{
+		id: 'about',
+		title: 'О Клинике',
+	},
+	{
 		id: 'services',
 		title: 'Услуги',
 	},
