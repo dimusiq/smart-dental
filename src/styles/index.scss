@@ -8,10 +8,12 @@
 }
 #root {
 	height: 100%;
+	
 }
 
 body {
-	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
 	font-family: $montserrat-font, $roboto-font, sans-serif;
 	color: $text2;
 	height: 200vh;
