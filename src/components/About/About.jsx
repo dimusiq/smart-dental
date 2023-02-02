@@ -4,11 +4,11 @@ import { about } from '../../assets/index';
 
 const About = () => {
 	return (
-		<div>
+		<div className={styles.content}>
 			<img
 				src={about}
 				alt='about'
-				className={styles.background}
+				className={styles.content__img}
 			/>
 		</div>
 	);

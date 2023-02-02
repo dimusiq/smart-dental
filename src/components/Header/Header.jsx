@@ -8,52 +8,48 @@ import { AiOutlineCloseSquare } from 'react-icons/ai';
 
 const Header = () => {
 	const [toggle, setToggle] = useState(false);
-
-	const menuToggler = () => setToggle((prev) => !prev);
+	const toggler = () => setToggle((p) => !p);
 
 	return (
 		<div className={styles.header}>
-			<header className={styles.header__content}>
-				<div className={styles.header__logo}>
-					<a href='/'>
-						<img src={logo} alt='logo' />
-					</a>
+			<div className={styles.header__content}>
+				<div>
+					<span className={styles.logo}>
+						<img src={logo} alt='' />
+					</span>
 				</div>
-				<nav
-					className={`${styles.nav} ${
-						toggle ? styles[`nav--open`] : {}
-					}`}
-				>
-					{navLinks.map((link, id) => (
-						<li key={id}>
-							<a
-								className={styles.nav__item}
-								href={link.id}
-							>
-								{link.title}
-							</a>
-						</li>
-					))}
-				</nav>
-				<div className={styles.header__button__container}>
-					<img src={tel} alt='tel' />
-					<a href='tel:+7(495)991-91-27'>
-						+7 (495) 991-91-27
-					</a>
+				<div>
+					<nav
+						className={`${styles.nav} ${
+							toggle ? styles[`nav--open`] : {}
+						}`}
+					>
+						{navLinks.map((link, id) => (
+							<li key={id} className={styles.nav__item}>
+								<a href={link.id}>{link.title}</a>
+							</li>
+						))}
+						<div className={styles.nav__button__container}>
+							<Button>Click me</Button>
+						</div>
+					</nav>
 				</div>
-				<div className={styles.header__btn__open}>
-					<Button
+				<div>
+					<div className={styles.header__button__container}>
+						<Button>Click me</Button>
+					</div>
+					<button
 						className={styles.header__toggler}
-						onClick={menuToggler}
+						onClick={toggler}
 					>
 						{!toggle ? (
 							<BiMenuAltRight />
 						) : (
 							<AiOutlineCloseSquare />
 						)}
-					</Button>
+					</button>
 				</div>
-			</header>
+			</div>
 		</div>
 	);
 };
