@@ -82,16 +82,17 @@
 	}
 
 	&__item,
+	ul,
 	li,
 	a {
-		padding-bottom: 16px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: block;
+		padding: $spacing-md;
+
 		text-decoration: none;
 		color: inherit;
+
 		height: 100%;
-		font-weight: 600;
+
 		transition: 0.3s ease color;
 		&:hover {
 			color: $primary;
@@ -99,26 +100,18 @@
 	}
 
 	@include breakpoint(md) {
+		position: static;
 		display: grid;
-		grid-template-columns: repeat(6, 0.5fr);
+		grid-template-columns: repeat(6, 1fr);
 		background: initial;
-		width: 100%;
+		width: auto;
 		padding: 0;
 
-		&__item,
-		li,
-		a {
+		&__item {
 			padding: 0 16px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			text-decoration: none;
-			font-style: normal;
-			font-weight: 500;
-			font-size: 24px;
-			line-height: 24px;
-			color: black;
-			margin-top: 20px;
 		}
 	}
 
@@ -127,5 +120,24 @@
 			display: none;
 		}
 		padding: $spacing-md;
+	}
+}
+
+.button {
+	font-weight: 500;
+	color: $primary;
+	border: 2px solid $primary;
+	padding: $spacing-sm $spacing-lg;
+	border-radius: $spacing-sm / 2;
+	cursor: pointer;
+
+	box-shadow: 0 0 0.5em 0 $primary;
+
+	&:active {
+		transform: scale(0.98);
+		border-radius: 0;
+	}
+	&:hover {
+		box-shadow: 0 0 0.75em 0 $primary;
 	}
 }
