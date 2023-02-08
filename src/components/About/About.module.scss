@@ -1,12 +1,58 @@
+@import '../../styles/variables.scss';
 .content {
-	margin-top: 60px;
+  margin-top: 60px;
   width: 100%;
- height: 35rem;
-  z-index: 0;
-  overflow: hidden;
+  height: 35rem;
+  z-index: 10;
+  position: relative;
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.window {
+  position: absolute;
+  top: 20%;
+  right: 27px;
+  z-index: 50;
+
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12.5px);
+  border-radius: 15px;
+  &__title {
+    padding: 40px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+
+    &__list {
+      text-align: left;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__button {
+    font-weight: 500;
+    color: $primary;
+
+    border: 2px solid $primary;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $spacing-sm / 2;
+    cursor: pointer;
+
+    box-shadow: 0 0 0.5em 0 $primary;
+
+    &:active {
+      transform: scale(0.98);
+      border-radius: 0;
+    }
+    &:hover {
+      box-shadow: 0 0 0.75em 0 $primary;
+    }
   }
 }
