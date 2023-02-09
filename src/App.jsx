@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './components/Header/Header';
-import About from './components/About/About';
+import Hero from './components/Hero/Hero';
 
 function App() {
 	return (
     <React.Fragment>
       <Header />
-      <About />
+      <Hero />
     </React.Fragment>
   );
 }
