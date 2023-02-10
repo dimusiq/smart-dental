@@ -44,10 +44,14 @@ const Hero = () => {
           </p>
         </div>
         <div className={styles.section__numbers}>
-          <div>врачей</div>
-          <div>услуг </div>
-          <div>пациентов в день</div>
-          <div> довольных пациентов</div>
+          <div className={styles.section__item}>врачей</div>
+          <div className={styles.section__item}>услуг </div>
+          <div className={styles.section__item}>
+            пациентов в день
+          </div>
+          <div className={styles.section__item}>
+            довольных пациентов
+          </div>
         </div>
       </section>
     </div>
