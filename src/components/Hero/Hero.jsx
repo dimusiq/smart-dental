@@ -26,9 +26,11 @@ const Hero = () => {
         </Button>
       </div>
       <section className={styles.section}>
-        <div>
-          <h1>О нашей клинике</h1>
-          <p>
+        <div className={styles.section__info}>
+          <h1 className={styles.section__title}>
+            О нашей клинике
+          </h1>
+          <p className={styles.section__text}>
             Мы предлагаем полный спектр стоматологических
             услуг, индивидуальный подход, а также сочетание
             классических и инновационных методов лечения
@@ -37,7 +39,7 @@ const Hero = () => {
             работает отделение для приема пациентов с острой
             болью.
           </p>
-          <p>
+          <p className={styles.section__text}>
             Оставьте страхи в прошлом. Доверьте здоровье
             своих зубов профессионалам из «Умной
             стоматологии»!
