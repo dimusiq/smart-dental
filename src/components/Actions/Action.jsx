@@ -1,20 +1,22 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Button from '../Button/Button';
 import { actions } from '../../constants';
+import { smile } from '../../assets';
 
 // Import Swiper styles
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import 'swiper/scss/navigation';
 
-import styles from './Actions.module.scss';
+import styles from './Action.module.scss';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper';
 
 const Action = () => {
   return (
-    <>
+    <React.Fragment>
       <div className={styles.container}>
         <h1 className={styles.container__title}>Акции</h1>
         <Swiper
@@ -34,38 +36,50 @@ const Action = () => {
               className={styles['swiper-slide']}
             >
               <div className={styles.slider__container}>
-                <div
-                  className={
-                    styles.slider__container__title
-                  }
-                >
-                  {action.title}
+                <div className={styles.container__img}>
+                  <img src={smile} alt='smile' />
                 </div>
-                <p
-                  className={
-                    styles.slider__container__oldPrice
-                  }
+                <div
+                  className={styles.slider__container__info}
                 >
-                  {action.oldPrice}
-                </p>
-                <p
-                  className={
-                    styles.slider__container__newPrice
-                  }
-                >
-                  {action.newPrice}
-                </p>
-                <p
-                  className={styles.slider__container__time}
-                >
-                  {action.time}
-                </p>
+                  <div
+                    className={
+                      styles.slider__container__info__title
+                    }
+                  >
+                    {action.title}
+                  </div>
+                  <div
+                    className={
+                      styles.slider__container__info__time
+                    }
+                  >
+                    {action.time}
+                  </div>
+                </div>
+                <div>
+                  <div
+                    className={
+                      styles.slider__container__oldPrice
+                    }
+                  >
+                    {action.oldPrice}
+                  </div>
+                  <div
+                    className={
+                      styles.slider__container__newPrice
+                    }
+                  >
+                    {action.newPrice}
+                  </div>
+                  <Button>Записаться</Button>
+                </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

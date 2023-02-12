@@ -15,7 +15,7 @@ const Header = () => {
       <div className={styles.header__content}>
         <div>
           <span className={styles.logo}>
-            <img src={logo} alt='' />
+            <img src={logo} alt='logo' />
           </span>
         </div>
         <div>
