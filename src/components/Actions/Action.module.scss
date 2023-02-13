@@ -16,9 +16,19 @@
   }
   &__img {
     align-items: center;
-    padding: 52px;
+    padding: 61px 0px;
+  }
+  &__pagination {
+    display: block;
+    text-align: center;
+    padding: 20px 0px;
+    transition: 300ms opacity;
+
+    z-index: 2;
   }
 }
+
+
 
 .slider__container {
   display: flex;
@@ -36,6 +46,7 @@
       font-size: 24px;
       line-height: 36px;
       color: #292929;
+      margin-bottom: 90px;
     }
 
     &__time {

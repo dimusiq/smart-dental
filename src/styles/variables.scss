@@ -31,8 +31,7 @@ $xl: 75em;
 //box-shadow
 $bxs: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-//height
-$header-height: 72px;
+
 //mixin
 @mixin breakpoint($point) {
 	@if $point == md {

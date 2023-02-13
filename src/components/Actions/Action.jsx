@@ -12,7 +12,7 @@ import 'swiper/scss/navigation';
 import styles from './Action.module.scss';
 
 // import required modules
-import { Pagination, Navigation } from 'swiper';
+import { Pagination } from 'swiper';
 
 const Action = () => {
   return (
@@ -24,10 +24,10 @@ const Action = () => {
           spaceBetween={30}
           loop={true}
           pagination={{
+            el: `.${styles.container__pagination}`,
             clickable: true,
           }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination]}
           className={styles.swiper}
         >
           {actions.map((action, id) => (
@@ -78,6 +78,7 @@ const Action = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className={styles.container__pagination} />
       </div>
     </React.Fragment>
   );

@@ -6,7 +6,7 @@
 
   border: 2px solid $primary;
   padding: $spacing-sm $spacing-lg;
-  border-radius: $spacing-sm / 2;
+  border-radius: ($spacing-sm, 2);
   cursor: pointer;
 
   box-shadow: 0 0 0.5em 0 $primary;
