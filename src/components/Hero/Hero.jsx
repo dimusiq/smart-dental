@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 import styles from './Hero.module.scss';
 import { about } from '../../assets/index';
 
-const Hero = () => {
+const Hero = ({ onShowForm }) => {
   return (
     <div className={styles.content}>
       <img
@@ -21,7 +21,10 @@ const Hero = () => {
           <li>Снимки</li>
           <li>План лечения</li>
         </ul>
-        <Button className={styles.window__button}>
+        <Button
+          onClick={onShowForm}
+          className={styles.window__button}
+        >
           Записаться
         </Button>
       </div>

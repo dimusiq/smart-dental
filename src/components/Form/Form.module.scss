@@ -1,0 +1,46 @@
+@import './../../styles/variables.scss';
+
+.container {
+  margin: 0 auto;
+  height: 200px;
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  background: #bfdefa;
+  border-radius: 60px;
+  padding: 70px;
+  &__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 38px;
+    color: #4c4c4c;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__list {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #4c4c4c;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+  }
+}
