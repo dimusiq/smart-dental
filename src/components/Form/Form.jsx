@@ -1,4 +1,5 @@
 import React from 'react';
+import useInput from '../../hooks/use-input';
 import { list } from '../../assets';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
@@ -7,13 +8,48 @@ import styles from './Form.module.scss';
 const portalElement = document.getElementById('overlays');
 
 const Form = ({ onHideForm }) => {
+  const {
+    value: enteredName,
+    hasError: hasNameInputError,
+    isValid: isNameValid,
+    inputChangeHandler: nameInputChangeHandler,
+    inputLostFocusHandler: nameInputLostFocusHandler,
+    resetValues: resetNameInputValues,
+  } = useInput((val) => val.trim() !== '');
+
+  const {
+    value: enteredTel,
+    hasError: hasTelInputError,
+    isValid: isTelValid,
+    inputChangeHandler: telInputChangeHandler,
+    inputLostFocusHandler: telInputLostFocusHandler,
+    resetValues: resetTelInputValues,
+  } = useInput((val) => val.trim() !== '');
+
+  let isFormValid = false;
+
+  if (isNameValid && isTelValid) {
+    isFormValid = true;
+  }
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    resetNameInputValues();
+    resetTelInputValues();
+  };
+
+
+
   return (
     <Modal onHideForm={onHideForm}>
       <div className={styles.container}>
         <div className={styles.container__title}>
           ЗАПИСЬ НА КОНСУЛЬТАЦИЮ
         </div>
-        <div className={styles.form}>
+        <form
+          onSubmit={submitHandler}
+          className={styles.form}
+        >
           <div className={styles.form__content}>
             <div className={styles.form__title}>
               Бесплатная консультация включает в себя:
@@ -30,13 +66,24 @@ const Form = ({ onHideForm }) => {
               className={styles.form__container__input}
               type='text'
               placeholder='Имя'
+              onChange={nameInputChangeHandler}
+              onBlur={nameInputLostFocusHandler}
+              value={enteredName}
             />
+            {hasNameInputError && <p>Введите Имя</p>}
             <input
               className={styles.form__container__input}
               type='text'
               placeholder='Телефон'
+              onChange={telInputChangeHandler}
+              onBlur={telInputLostFocusHandler}
+              value={enteredTel}
             />
-            <Button className={styles.form__btn}>
+            {hasTelInputError && <p>Введите телефон</p>}
+            <Button
+              disabled={!isFormValid}
+              className={styles.form__btn}
+            >
               Записаться
             </Button>
             <div className={styles.form__info}>
@@ -46,7 +93,7 @@ const Form = ({ onHideForm }) => {
               </p>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </Modal>
   );
