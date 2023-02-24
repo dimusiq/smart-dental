@@ -32,13 +32,24 @@ const Form = ({ onHideForm }) => {
     isFormValid = true;
   }
 
+  const submitData = async (userName, tel) => {
+    await fetch(
+      'https://react-https-21668-default-rtdb.firebaseio.com/user.json',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          user: userName,
+          tel: tel,
+        }),
+      }
+    );
+  };
   const submitHandler = (e) => {
     e.preventDefault();
+    submitData(enteredName, enteredTel);
     resetNameInputValues();
     resetTelInputValues();
   };
-
-
 
   return (
     <Modal onHideForm={onHideForm}>
@@ -55,7 +66,7 @@ const Form = ({ onHideForm }) => {
               Бесплатная консультация включает в себя:
             </div>
             <ul className={styles.form__list}>
-              <img src={list} alt='list'></img>
+              <img src={list} alt='list' />
               <li>Первичный осмотр</li>
               <li>Снимки</li>
               <li>План лечения</li>
