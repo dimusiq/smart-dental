@@ -4,6 +4,7 @@ import Action from './components/Actions/Action';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Form from './components/Form/Form';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [formIsVisible, setFormIsVisible] = useState(false);
@@ -22,6 +23,7 @@ function App() {
       <Hero onShowForm={showFormHandler} />
       <Action />
       <Accordion />
+      <Footer />
     </React.Fragment>
   );
 }

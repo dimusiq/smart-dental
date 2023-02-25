@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useInput from '../../hooks/use-input';
 import { list } from '../../assets';
 import Button from '../Button/Button';
@@ -8,6 +8,7 @@ import styles from './Form.module.scss';
 const portalElement = document.getElementById('overlays');
 
 const Form = ({ onHideForm }) => {
+  const [formValid, setFormValid] = useState(false);
   const {
     value: enteredName,
     hasError: hasNameInputError,
@@ -44,6 +45,7 @@ const Form = ({ onHideForm }) => {
       }
     );
   };
+
   const submitHandler = (e) => {
     e.preventDefault();
     submitData(enteredName, enteredTel);
