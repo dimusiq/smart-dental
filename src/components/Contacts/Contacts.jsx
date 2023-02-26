@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  YMaps,
+  Map,
+  Placemark,
+} from '@pbe/react-yandex-maps';
 
 const Contacts = () => {
   return (
@@ -15,7 +20,27 @@ const Contacts = () => {
             Метро Белорусская, Новослободская, Менделеевская
           </div>
         </div>
-        <div>Карта</div>
+        <div>
+          <YMaps>
+            <Map
+              defaultState={{
+                center: [55.75, 37.57],
+                zoom: 9,
+                controls: [
+                  'zoomControl',
+                  'fullscreenControl',
+                ],
+              }}
+              modules={[
+                'control.ZoomControl',
+                'control.FullscreenControl',
+              ]}
+            >
+              <Placemark defaultGeometry={[55.75, 37.57]} />
+            </Map>
+          </YMaps>
+          ;
+        </div>
       </section>
     </div>
   );

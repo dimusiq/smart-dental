@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
+import Contacts from './components/Contacts/Contacts'
 
 function App() {
   const [formIsVisible, setFormIsVisible] = useState(false);
@@ -24,6 +25,7 @@ function App() {
       <Action />
       <Accordion />
       <Footer />
+      <Contacts/>
     </React.Fragment>
   );
 }

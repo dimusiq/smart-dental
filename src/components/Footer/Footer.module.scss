@@ -39,23 +39,27 @@
   justify-content: right;
 
   margin-top: 30px;
+
   &__img {
     display: flex;
-    margin-right: 16px;
     justify-content: center;
+    margin-right: 26px;
     width: 45px;
     height: 45px;
     display: flex;
     align-self: center;
     background-color: #ffffff;
-
     border-radius: 50%;
+  }
+  &__img:last-child,
+  a {
+    margin-right: 0px;
   }
 }
 
 .icon {
   padding: 5px;
   align-content: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #127bd7;
 }
