@@ -4,28 +4,31 @@ import {
   Map,
   Placemark,
 } from '@pbe/react-yandex-maps';
+import styles from './Contacts.module.scss';
 
 const Contacts = () => {
   return (
-    <div>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.container__title}>
         <h1>КОНТАКТЫ</h1>
       </div>
-      <section>
+      <section className={styles.section}>
         <div>
           <div>+7 (495) 991-91-27</div>
-          <div>client@smartclinik.ru</div>
+          <a href='client@smartclinik.ru'>
+            client@smartclinik.ru
+          </a>
           <div>Москва, улица Новолесная, д. 4</div>
           <div>
             Метро Белорусская, Новослободская, Менделеевская
           </div>
         </div>
-        <div>
+        <div className={styles.map}>
           <YMaps>
             <Map
               defaultState={{
                 center: [55.75, 37.57],
-                zoom: 9,
+                zoom: 8,
                 controls: [
                   'zoomControl',
                   'fullscreenControl',
@@ -39,7 +42,6 @@ const Contacts = () => {
               <Placemark defaultGeometry={[55.75, 37.57]} />
             </Map>
           </YMaps>
-          ;
         </div>
       </section>
     </div>
