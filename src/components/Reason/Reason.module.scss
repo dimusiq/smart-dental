@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.container {
+  background-color: #dfeffc;
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 22px;
+    grid-template-areas:
+      '. . .'
+      '. . .';
+  }
+}

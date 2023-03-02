@@ -6,6 +6,7 @@ import Hero from './components/Hero/Hero';
 import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
 import Contacts from './components/Contacts/Contacts';
+import Reason from './components/Reason/Reason';
 
 function App() {
   const [formIsVisible, setFormIsVisible] = useState(false);
@@ -22,10 +23,13 @@ function App() {
       )}
       <Header />
       <Hero onShowForm={showFormHandler} />
-      <Action />
-      <Accordion />
-      <Contacts />
-      <Footer />
+      <React.Fragment>
+        <Reason />
+        <Accordion />
+        <Action />
+        <Contacts />
+        <Footer />
+      </React.Fragment>
     </React.Fragment>
   );
 }

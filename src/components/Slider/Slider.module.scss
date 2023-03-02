@@ -30,45 +30,6 @@
 
 
 
-.slider__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: white;
-
-  &__info {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    &__title {
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 36px;
-      color: #292929;
-      margin-bottom: 90px;
-    }
-
-    &__time {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 36px;
-    }
-  }
-  &__oldPrice {
-    text-decoration-line: line-through;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
-    color: rgba(41, 41, 41, 0.5);
-  }
-  &__newPrice {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 36px;
-    color: #127bd7;
-  }
-}
 
 .swiper {
   width: 90%;
@@ -77,28 +38,3 @@
   border-radius: 80px;
 }
 
-// .swiper-slide {
-
-//   /* Center slide text vertically */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   /* Center slide text vertically */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-// }
-
-// .swiper-slide img {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-// .swiper {
-//   margin-left: auto;
-//   margin-right: auto;
-// }
