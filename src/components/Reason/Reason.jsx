@@ -9,6 +9,7 @@ const Reason = () => {
       </div>
 
       <div className={styles.container__items}>
+
         <div>Доступные цены</div>
         <div>Гарантия на лечение</div>
         <div>Бесплатная парковка</div>
