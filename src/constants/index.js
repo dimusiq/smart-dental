@@ -1,3 +1,12 @@
+import {
+  doctor,
+  installment,
+  nopain,
+  parking,
+  technologies,
+  price,
+} from '../assets/icons/index.js';
+
 export const navLinks = [
   {
     id: 'services',
@@ -85,5 +94,38 @@ export const accordionData = [
   {
     title: 'Установка имплантата',
     content: `Sapiente expedita hic obcaecati, laboriosam similique omnis`,
+  },
+];
+
+export const reasons = [
+  {
+    id: 1,
+    img: price,
+    title: 'Доступные цены',
+  },
+  {
+    id: 2,
+    img: doctor,
+    title: 'Гарантия на лечение',
+  },
+  {
+    id: 3,
+    img: parking,
+    title: 'Бесплатная парковка',
+  },
+  {
+    id: 4,
+    img: installment,
+    title: 'Беспроцентная рассрочка',
+  },
+  {
+    id: 5,
+    img: nopain,
+    title: 'Лечение без боли',
+  },
+  {
+    id: 6,
+    img: technologies,
+    title: 'Новейшие технологии',
   },
 ];

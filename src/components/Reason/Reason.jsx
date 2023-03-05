@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Reason.module.scss';
+import { reasons } from '../../constants';
 
 const Reason = () => {
   return (
@@ -7,15 +8,17 @@ const Reason = () => {
       <div className={styles.container__title}>
         <h1>Почему выбирают нас</h1>
       </div>
-
       <div className={styles.container__items}>
-
-        <div>Доступные цены</div>
-        <div>Гарантия на лечение</div>
-        <div>Бесплатная парковка</div>
-        <div>Беспроцентная рассрочка </div>
-        <div>Лечение без боли</div>
-        <div>Новейшие технологии</div>
+        {reasons.map((item) => (
+          <div key={item.id}>
+            <div>
+              <div>
+                <img src={item.img} alt={item.title} />
+              </div>
+              <p>{item.title}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
