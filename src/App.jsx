@@ -7,6 +7,8 @@ import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
 import Contacts from './components/Contacts/Contacts';
 import Reason from './components/Reason/Reason';
+import Trust from './components/Trust/Trust';
+
 
 function App() {
   const [formIsVisible, setFormIsVisible] = useState(false);
@@ -27,6 +29,7 @@ function App() {
         <Reason />
         <Accordion />
         <Action />
+        <Trust/>
         <Contacts />
         <Footer />
       </React.Fragment>
