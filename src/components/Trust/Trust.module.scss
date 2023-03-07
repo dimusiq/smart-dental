@@ -1,1 +1,25 @@
 @import '../../styles/variables.scss';
+
+.container {
+  height: 578px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+
+  &__image {
+    position: relative;
+    display: block;
+    width: 33%;
+
+    &__background {
+      position: absolute;
+      z-index: 2;
+    }
+    &__person {
+      position: absolute;
+      z-index: 12;
+    }
+  }
+}

@@ -1,12 +1,13 @@
 import React from 'react';
+import styles from '../Trust/Trust.module.scss';
 import { tooth, katya2 } from '../../assets/index';
 
 const Trust = () => {
   return (
-    <section>
+    <section className={styles.container}>
       <div>
         <div>
-          <h2>о доверии</h2>
+          <h4>о доверии</h4>
           <p>
             Наша главная цель - долгосрочные доверительные
             отношения с нашими пациентами. Поэтому мы
@@ -15,10 +16,18 @@ const Trust = () => {
           </p>
         </div>
       </div>
-      <div>
-        <div>
-          <img src={tooth} alt='' />
-          <img src={katya2} alt='' />
+      <div className={styles.content}>
+        <div className={styles.content__image}>
+          <img
+            className={styles.content__image__background}
+            src={tooth}
+            alt=''
+          />
+          <img
+            className={styles.content__image__person}
+            src={katya2}
+            alt=''
+          />
         </div>
         <div>
           <p>
