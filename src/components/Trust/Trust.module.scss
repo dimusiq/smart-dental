@@ -4,6 +4,53 @@
   height: 578px;
 }
 
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #292929;
+}
+
+.quote {
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 4px 40px rgba(18, 123, 215, 0.15);
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 900;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #292929;
+  position: relative;
+}
+
+.quote:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid transparent;
+  left: 0px;
+  bottom: -19px;
+}
+
 .content {
   display: flex;
   justify-content: space-between;
