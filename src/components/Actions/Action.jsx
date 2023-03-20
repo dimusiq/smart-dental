@@ -1,9 +1,11 @@
 import React from 'react';
-import { SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide } from 'swiper/react';
 import Button from '../Button/Button';
 import { actions } from '../../constants';
 import { smile } from '../../assets';
-import Slider from '../Slider/Slider';
+
+// import required modules
+import { Pagination } from 'swiper';
 // Import Swiper styles
 import 'swiper/scss';
 import 'swiper/scss/pagination';
@@ -15,7 +17,16 @@ const Action = () => {
     <React.Fragment>
       <div className={styles.container}>
         <h1 className={styles.container__title}>Акции</h1>
-        <Slider>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            el: `.${styles.container__pagination}`,
+            clickable: true,
+          }}
+          modules={[Pagination]}
+        >
           {actions.map((action, id) => (
             <SwiperSlide
               key={id}
@@ -63,7 +74,7 @@ const Action = () => {
               </div>
             </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
         <div className={styles.container__pagination} />
       </div>
     </React.Fragment>

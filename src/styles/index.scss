@@ -113,3 +113,20 @@ input {
   -webkit-appearance: none;
   border-radius: 0;
 }
+
+/* target the active bullet */
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #127bd7;
+  box-shadow: 0px 0px 10px 2px #127bd7;
+}
+
+/* target all bullets */
+.swiper-pagination-bullet {
+  background: #c4c4c4;
+  margin-left: 30px !important;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  opacity: 1;
+  transition: 300ms;
+}
