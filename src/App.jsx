@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer';
 import Contacts from './components/Contacts/Contacts';
 import Reason from './components/Reason/Reason';
 import Trust from './components/Trust/Trust';
-
+import Layout from './components/Layout/Layout';
 
 function App() {
   const [formIsVisible, setFormIsVisible] = useState(false);
@@ -19,21 +19,20 @@ function App() {
     setFormIsVisible(false);
   };
   return (
-    <React.Fragment>
+    <Layout>
       {formIsVisible && (
         <Form onHideForm={hideFormHandler} />
       )}
-      <Header />
       <Hero onShowForm={showFormHandler} />
       <React.Fragment>
         <Reason />
         <Accordion />
         <Action />
-        <Trust/>
+        <Trust />
         <Contacts />
         <Footer />
       </React.Fragment>
-    </React.Fragment>
+    </Layout>
   );
 }
 
